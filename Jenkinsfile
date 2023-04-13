@@ -8,14 +8,14 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t pradeep87987/react-app:1.1 .'
+                sh 'docker build -t pradeep87987/react-app:1.2 .'
             }
         }
         stage('Push Image') {
             steps {
               
                 sh 'docker login -u pradeep87987 -p Pradi@012'
-                sh 'docker push pradeep87987/react-app:1.1'
+                sh 'docker push pradeep87987/react-app:1.2'
             }
         }
         stage('Deploy') {
