@@ -14,7 +14,7 @@ pipeline {
         stage('Push Image') {
             steps {
               
-                sh 'docker login docker login -u pradeep87987 -p Pradi@012'
+                sh 'docker login -u pradeep87987 -p Pradi@012'
                 sh 'docker push pradeep87987/react-app:1.1'
             }
         }
