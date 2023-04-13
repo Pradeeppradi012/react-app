@@ -13,10 +13,8 @@ pipeline {
         }
         stage('Push Image') {
             steps {
-                withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerhublogin')]) {
-    // some block
-}
-                sh 'docker login -u pradeep87987 -p ${dockerhublogin}'
+              
+                sh 'docker login docker login -u pradeep87987 -p Pradi@012'
                 sh 'docker push pradeep87987/react-app:1.1'
             }
         }
