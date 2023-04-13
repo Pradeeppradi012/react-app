@@ -18,6 +18,11 @@ pipeline {
                 sh 'docker push pradeep87987/react-app:1.1'
             }
         }
+        stage('Deploy') {
+            steps {
+                kubernetesDeploy configs: 'deployment.yaml', kubeConfig: [path: ''], kubeconfigId: 'kubepwd', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+            }
+        }
 
             
         }
