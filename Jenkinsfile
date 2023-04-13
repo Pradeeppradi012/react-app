@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build -t pradeep87987/react-app .'
+                sh 'docker build -t pradeep87987/react-app:1.1 .'
             }
         }
     }
